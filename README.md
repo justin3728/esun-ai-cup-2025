@@ -53,8 +53,6 @@ The final CV pipeline uses **27 features** covering:
 - transaction velocity
 - account-type distribution
 
-Experimental feature blocks tested during the competition were intentionally removed from this public version.
-
 ### 3. PU learning and LightGBM
 
 `notebooks/03_pu_lightgbm_cv.ipynb`
@@ -82,40 +80,3 @@ The modeling pipeline:
 ├── README.md
 └── requirements.txt
 ```
-
-## Running locally
-
-Create a virtual environment and install dependencies:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-Place the competition files in `data/`:
-
-```text
-data/
-├── acct_transaction.csv
-├── acct_alert.csv
-└── acct_predict.csv
-```
-
-Then run the notebooks in numerical order.
-
-Generated parquet files, plots, and submissions are written to `artifacts/`.
-
-## Reproducibility note
-
-The competition dataset is **not included** in this repository. The public code was cleaned from the original competition notebooks without access to the original evaluation environment, so end-to-end results are not re-verified here.
-
-## Repository cleanup
-
-This public version keeps the final 27-feature CV implementation and removes:
-
-- legacy functions preserved only as large commented blocks
-- feature-ablation experiments that were not part of the final 27-feature CV path
-- notebook outputs and debug-only cells
-- local absolute Windows paths
-- unused imports and competition-development clutter
