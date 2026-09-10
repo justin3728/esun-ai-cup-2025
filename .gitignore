@@ -1,0 +1,21 @@
+# Competition data and generated artifacts
+data/
+artifacts/
+*.csv
+*.parquet
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
